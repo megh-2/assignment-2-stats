@@ -1,0 +1,133 @@
+Topics: Confidence Intervals
+
+1.	For each of the following statements, indicate whether it is True/False. If false, explain why.
+
+I.	The sample size of the survey should at least be a fixed percentage of the population size in order to produce representative results.
+
+Ans)    False: 
+The sample size alone is not sufficient for determining representativeness. The result depends on the size(n) of th sample. Should have atleast  30 observations.
+
+II.	The sampling frame is a list of every item that appears in a survey sample, including those that did not respond to questions.
+        Ans)
+FALSE :
+The sampling frame is a list of all the elements or units in the population from which the sample is drawn. 
+
+III.	Larger surveys convey a more accurate impression of the population than smaller surveys.
+      Ans)
+                 TRUE
+Large sample size result in less standard deviation compared to small sample size
+
+
+
+2.	PC Magazine asked all of its readers to participate in a survey of their satisfaction with different brands of electronics. In the 2004 survey, which was included in an issue of the magazine that year, more than 9000 readers rated the products on a scale from 1 to 10. The magazine reported that the average rating assigned by 225 readers to a Kodak compact digital camera was 7.5. For this product, identify the following:
+
+A.	The population = PC magazine’s readers =900
+     Ans)        The population would be all readers of PC Magazine who were asked to participate in the survey. It includes all individuals who could have provided ratings for different brands of electronics.
+
+B.	The parameter of interest =  Readers, Scale = 7.5
+    Ans)     The parameter of interest is the average rating assigned by all readers of PC Magazine (the entire population) to the Kodak compact digital camera.
+
+C.	The sampling frame. = 9000
+Ans)       The sampling frame is all the readers who were asked to participate in the survey.
+
+D.	The sample size = 225
+Ans)    The sample size mentioned is 225 readers who rated the Kodak compact digital camera.
+
+E.	The sampling design
+Ans) Random sampling
+
+
+F.	Any potential sources of bias or other problems with the survey or sample
+Ans)
+                 The rating was extracted from only 225  out of 9000 readers.so there could be a bias or other problems with sample.
+
+3.	For each of the following statements, indicate whether it is True/False. If false, explain why.
+
+I.	If the 95% confidence interval for the average purchase of customers at a department store is $50 to $110, then $100 is a plausible value for the population mean at this level of confidence.
+True
+   Confidence intervals identifies the collection of values for the population        parameters present in the sample.
+
+II.	If the 95% confidence interval for the number of moviegoers who purchase concessions is 30% to 45%, this means that fewer than half of all moviegoers purchase concessions.
+                
+            False: 
+The 95% confidence interval here refers to the range of values within which we are 95% confident the true population proportion falls. Here,the interval suggests that we are 95% confident that the true proportion of moviegoers who purchase concessions is between 30% and 45%.
+
+III.	The 95% Confidence-Interval for μ only applies if the sample data are nearly normally distributed.
+
+False: The Central Limit Theorem states that for a sufficiently large sample size, the distribution of the sample mean will be approximately normal, regardless of the distribution of the original data, as long as the sample size is large enough.
+
+
+4.	What are the chances that    ? 
+
+A.	¼ 
+B.	½ 
+C.	¾ 
+D.	1
+           The probability of     being greater than μ is represented by the area under the curve to the right of μ. It gives symmetric distribution with 0.5 or 50% probability in case of standard normal distribution as per assumption.
+
+5.	In January 2005, a company that monitors Internet traffic (WebSideStory) reported that its sampling revealed that the Mozilla Firefox browser launched in 2004 had grabbed a 4.6% share of the market.
+
+I.	If the sample were based on 2,000 users, could Microsoft conclude that Mozilla has a less than 5% share of the market?
+
+    Ans)      z_scores=(0.046-0.05)/(np.sqrt((0.05*(1-0.05))/2000))
+         p_value=1-stats.norm.cdf(abs(z_scores))
+
+
+                    NO , with z-score = -0.8207,    p_value = 0.2058
+As (p_value = 0.2058) > (α = 0.05) ; Accept Null Hypothesis i.e. Mozilla market share greater than 5%. Thus, Microsoft can’t conclude that Mozilla has a less than 5% share of the market
+
+II.	WebSideStory claims that its sample includes all the daily Internet users. If that’s the case, then can Microsoft conclude that Mozilla has a less than 5% share of the market?
+Ans)            YES.  4.6% is population percentage. By comparing  with Microsoft claim that mozilla has a less than 5% share .
+         
+
+6.	A book publisher monitors the size of shipments of its textbooks to university bookstores. For a sample of texts used at various schools, the 95% confidence interval for the size of the shipment was 250 ± 45 books. Which, if any, of the following interpretations of this interval are correct?
+
+A.	All shipments are between 205 and 295 books.  Range= (205,295)
+False: The confidence interval (250 ± 45) indicates a range within which we are 95% confident that the true population mean falls, not that all individual shipments fall within that range.
+
+B.	95% of shipments are between 205 and 295 books.
+False: This is incorrect. The correct interpretation is that we are 95% confident that the true population mean falls within the interval (205, 295), not that 95% of individual shipments fall within this range.
+
+C.	The procedure that produced this interval generates ranges that hold the population mean for 95% of samples.
+
+True: The confidence interval is constructed in a way that, in repeated sampling, 95% of intervals generated using this procedure would contain the true population mean.
+
+D.	If we get another sample, then we can be 95% sure that the mean of this second sample is between 205 and 295.
+False:. The confidence interval provides a range within which we are 95% confident the population mean lies, but it doesn't make a statement about the mean of a specific second sample.
+
+E.	We can be 95% confident that the range 160 to 340 holds the population mean.
+ True:. If the confidence interval is constructed properly, then we can say that we are 95% confident that the true population mean falls within the range (160, 340).
+
+
+7.	Which is shorter: a 95% z-interval or a 95% t-interval for μ if we know that σ =s?
+
+A.	The z-interval is shorter
+B.	The t-interval is shorter
+C.	Both are equal
+D.	We cannot say
+
+Critical calue of t is greater than z. so z-interval is shorter  than t-interval
+
+
+Questions 8 and 9 are based on the following: To prepare a report on the economy, analysts need to estimate the percentage of businesses that plan to hire additional employees in the next 60 days.
+
+8.	How many randomly selected employers (minimum number) must we contact in order to guarantee a margin of error of no more than 4% (at 95% confidence)?
+
+A.	600
+B.	400
+C.	550                              for 95% C.I , z = 1.96
+D.	100                                                    M = 0.04
+                                                          p = 0.5
+
+                                       N = (z/M)**2 * p(1-p)
+                                       
+                                     N = 600.25 
+9.	Suppose we want the above margin of error to be based on a 98% confidence level. What sample size (minimum) must we now use?
+
+A.	1000
+B.	757
+C.	848
+D.	543
+
+                  N= (2.326/0.04)**2*0.5(1-0.5)
+                  N= 845.35 ==approximately = 848
