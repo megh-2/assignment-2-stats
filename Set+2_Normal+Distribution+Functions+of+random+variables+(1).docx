@@ -1,0 +1,65 @@
+Topics: Normal distribution, Functions of Random Variables
+
+1.	The time required for servicing transmissions is normally distributed with  = 45 minutes and  = 8 minutes. The service manager plans to have work begin on the transmission of a customer’s car 10 minutes after the car is dropped off and the customer is told that the car will be ready within 1 hour from drop-off. What is the probability that the service manager cannot meet his commitment? 
+
+A.	0.3875   
+B.	0.2676   
+C.	0.5   
+D.	0.6987 
+Ans)    z- score= 10-45/8  = -4.375
+          P value is approximately equal to 0.  So car will be ready within one hour from drop  off.
+
+
+
+
+2.	The current age (in years) of 400 clerical employees at an insurance claims processing center is normally distributed with mean  = 38 and Standard deviation  =6. For each statement below, please specify True/False. If false, briefly explain why.
+A.	More employees at the processing center are older than 44 than between 38 and 44.
+ANS)         TRUE
+B.	A training program for employees under the age of 30 at the center would be expected to attract about 36 employees.
+Ans)          FALSE. Because, To determine the number of employees expected to be under the age of 30, we need to find the proportion of employees within one standard deviation below the mean.
+•	The z-score for 30 is 30−386= −1.33.
+•	the expected number of employees under 30 in a sample of 400 would be     0.0915×400≈36.60.0915×400 ≈ 36.6, so the statement is false.
+
+
+
+
+
+3.	If X1 ~ N(μ, σ2) and X2 ~ N(μ, σ2) are iid normal random variables, then what is the difference between 2 X1 and X1 + X2? Discuss both their distributions and parameters.       
+Ans)
+•	2X1∼N(2μ,4σ2)
+•	X1+X2∼N(2μ,2σ2).
+•	The difference 2X1−(X1+X2) can be expressed as X1−X2.
+•	The distribution of X1−X2 will be normal.
+•	The mean of X1−X2 will be 0.
+•	The variance of X1−X2 will be 3σ2 .
+•	So, X1−X2∼N(0,3σ2).
+
+4.	Let X ~ N(100, 202). Find two values, a and b, symmetric about the mean, such that the probability of the random variable taking a value between them is 0.99. 
+Ans)
+z1= stats.norm.ppf(0.995,100,20)
+z2 = stats.norm.ppf(0.005,100,20)
+(z1,z2)
+(151.516586070978, 48.483413929021985)
+A.	90.5, 105.9 
+B.	80.2, 119.8              
+C.	22, 78 
+D.	48.5, 151.5 
+E.	90.1, 109.9
+
+5.	Consider a company that has two different divisions. The annual profits from the two divisions are independent and have distributions Profit1 ~ N(5, 32) and Profit2 ~ N(7, 42) respectively. Both the profits are in $ Million. Answer the following questions about the total profit of the company in Rupees. Assume that $1 = Rs. 45
+A.	Specify a Rupee range (centered on the mean) such that it contains 95% probability for the annual profit of the company.
+B.	Specify the 5th percentile of profit (in Rupees) for the company
+C.	Which of the two divisions has a larger probability of making a loss in a given year?
+
+Ans)  RANGE= POINT ESTIMATE +- MARGIN OF ERROR
+a)	Range =(stats.norm.interval(0.95,540,225))
+      b) 5th percentile of profit (X)= 540+(-1.645)*(225)
+      c) stats.norm.cdf(0,5,3) = 0.047
+         stats.norm.cdf(0,7,4) = 0.0400
+
+
+A.	Rupee Range= [99.00,980.99]
+B.	5th Percentile of profit (Rupees)= 170
+C.	Profit 1 has higher probability of making a loss in a given year. Since it has more probability.
+     
+
