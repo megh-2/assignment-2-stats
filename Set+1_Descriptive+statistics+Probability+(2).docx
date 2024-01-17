@@ -1,0 +1,146 @@
+Topics: Descriptive Statistics and Probability
+
+
+	Look at the data given below. Plot the data, find the outliers and find out  μ,σ,σ^2
+
+Name of company	Measure X
+Allied Signal	24.23%
+Bankers Trust	25.53%
+General Mills	25.41%
+ITT Industries	24.14%
+J.P.Morgan & Co.	29.62%
+Lehman Brothers	28.25%
+Marriott	25.81%
+MCI	24.39%
+Merrill Lynch	40.26%
+Microsoft	32.95%
+Morgan Stanley	91.36%
+Sun Microsystems	25.99%
+Travelers	39.42%
+US Airways	26.71%
+Warner-Lambert	35.00%
+
+
+ans)                                    boxplot 
+                                         
+ 
+THERE IS ONLY ONE OUTLIER IN THE DATA, THE NAME OF THE COMPANY IS “morgan stanley” WITH 91.36% AS EXTREME VALUE COMPARED TO OTHER DATA
+
+data=pd.DataFrame({"Name of Company":["Allied Signal",
+"Bankers Trust",
+"General Mills",
+"ITT Industries",
+"J.P.Morgan & Co.",
+"Lehman Brothers",
+"Marriott",
+"MCI",
+"Merrill Lynch",
+"Microsoft",
+"Morgan Stanley",
+"Sun Microsystems",
+"Travelers",
+"US Airways",
+"Warner-Lambert"],"Measure X":[24.23,25.53,
+25.41,
+24.14,
+29.62,
+28.25,
+25.81,
+24.39,
+40.26,
+32.95,
+91.36,
+25.99,
+39.42,
+26.71,
+35.00]})
+data.mean()
+data.std()
+data.var()
+
+                                        MEAN=   33.27133333333333
+           STANDARD DEVIATION= 16.945400921222028                               
+                                  VARIANCE=  287.1466123809524
+
+
+	
+ 
+Answer the following three questions based on the box-plot above.
+	What is inter-quartile range of this dataset? (please approximate the numbers) In one line, explain what this value implies.
+	What can we say about the skewness of this dataset?
+	If it was found that the data point with the value 25 is actually 2.5, how would the new box-plot be affected?
+
+
+Ans) 
+	Inter quartile range is approximately  7.  It implies the  central 50% spread of the data. 12-5=7
+	The skewness of this data set is positively skewed since the right tail is longer than the left whiskers.
+	If the value of 25 is actually 2.5 then there will be no outliers present in the dataset. This could affect the length of the whiskers due to its  variability.
+
+
+
+
+
+
+
+
+
+
+
+	
+ 
+
+Answer the following three questions based on the histogram above.
+	Where would the mode of this dataset lie?
+	Comment on the skewness of the dataset.	
+	Suppose that the above histogram and the box-plot in question 2 are plotted for the same dataset. Explain how these graphs complement each other in providing information about any dataset. 
+
+
+Ans)
+	 The mode of the dataset lies in the value of y  = “5”.
+	The skewness will be right skewed since majority of the data falls on the left side and longer tail in the right.hence, “POSITIVE SKEWNESS”.
+	Histograms provides a shape of the distribution and how data is spread across different values i.e. “granularity”
+Boxplot explains about the median, quartiles, the spread of the data as well as outliers if any.
+They both explains the characteristics of the data.
+
+
+
+	AT&T was running commercials in 1990 aimed at luring back customers who had switched to one of the other long-distance phone service providers. One such commercial shows a businessman trying to reach Phoenix and mistakenly getting Fiji, where a half-naked native on a beach responds incomprehensibly in Polynesian. When asked about this advertisement, AT&T admitted that the portrayed incident did not actually take place but added that this was an enactment of something that “could happen.” Suppose that one in 200 long-distance telephone calls is misdirected. What is the probability that at least one in five attempted telephone calls reaches the wrong number? (Assume independence of attempts.)
+
+Ans)  p: Probability of success (misdirection), which is 1/200.
+q: Probability of failure (not misdirection), which is 1−p. i.e, (1-(1/200))
+
+P(at least one misdirected call)=1−(1−(1/200))**
+                                                                         =0.0247
+
+
+
+
+	Returns on a certain business venture, to the nearest $1,000, are known to follow the following probability distribution
+x	P(x)
+-2,000	0.1
+-1,000	0.1
+0	0.2
+1000	0.2
+2000	0.3
+3000	0.1
+
+	What is the most likely monetary outcome of the business venture?
+	Is the venture likely to be successful? Explain
+	What is the long-term average earning0.1 of business ventures of this kind? Explain
+	What is the good measure of the risk involved in a venture of this kind? Compute this measure
+Ans)
+	The most likely monetary outcome of the business venture is 2000 with probability having mor i.e, 0.3
+	Yes. the probability  that venture will make more than expected seems with the probability  p(x) = 0.2+0.2+0.3+0.1 = 0.8. tells that 80% chance for making the profit.
+	The long term average earning of business ventures of this kind  is =
+           Summation(x * ( P (x) ) = (-2000)*0.1 +(-1000)*0.1 + 0+ 1000*0.2+2000*0.3 + 3000*0.1 = +800$
+	The good measure of the risk involved in a venture of this kind is normally spread of the distribution. high deviation means more chance of risks
+                                Standard deviation =sqrt(E(x**2) – E(x)**2)
+                                                                     = sqrt(2800000 – (800**2))
+                                                               std = 1469.6 
+             the variation std is in thousands so there might be high chance of risk due to the wide range of variability.
+                                                                     
+             
+
+
+
+
